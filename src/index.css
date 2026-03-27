@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-black: #0A0502;
+  --color-coffee-glow: #FF4E00;
+  --color-coffee-accent: #D2691E;
+  --color-cream: #FDFBF7;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-coffee-black);
+    color: var(--color-cream);
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 78, 0, 0.5);
+  }
+  .bg-glow {
+    background: radial-gradient(circle at center, var(--color-coffee-glow) 0%, transparent 70%);
+  }
+}
